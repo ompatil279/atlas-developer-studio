@@ -106,7 +106,7 @@ atlas decode 0xa9059cbb000000…`} />
 ];
 
 function Docs() {
-  const [active, setActive] = useState(SECTIONS[0].id);
+  const [active, setActive] = useState<string>("overview");
   return (
     <>
       <PageHeader eyebrow="Integrate" title="Developer Hub" description="Concepts, contracts and tooling for building on ATLAS." />

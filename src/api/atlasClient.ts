@@ -7,7 +7,7 @@ import type {
 
 /** Base URL from VITE_ATLAS_API_URL. Undefined = unconfigured (no requests are made). */
 export function getApiBaseUrl(): string | undefined {
-  const raw = (import.meta.env.VITE_ATLAS_API_URL as string | undefined)?.trim();
+  const raw = (import.meta.env["VITE_ATLAS_API_URL"] as string | undefined)?.trim();
   return raw ? raw.replace(/\/+$/, "") : undefined;
 }
 

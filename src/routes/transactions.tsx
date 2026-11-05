@@ -22,7 +22,7 @@ const NETWORKS = ["Ethereum Mainnet", "Base", "Arbitrum One", "Optimism", "Polyg
 
 function Transactions() {
   const [hash, setHash] = useState("");
-  const [net, setNet] = useState(NETWORKS[0]);
+  const [net, setNet] = useState<string>("Ethereum Mainnet");
   return (
     <>
       <PageHeader eyebrow="Investigate" title="Transaction Lab" description="Look up a transaction by hash and trace its calls once RPC support lands." />
