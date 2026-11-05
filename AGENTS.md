@@ -28,3 +28,8 @@ use the editor.
   own key and store it in Secrets.
 - **Secrets.** Lovable manages them. Do not put secret values in the repo.
 <!-- LOVABLE:END -->
+
+## Project rules
+- ATLAS Studio is frontend-only: API access goes through `src/api/atlasClient.ts` returning a discriminated `ApiResult` (unconfigured / network-error / http-error / empty / ok) so the UI never fabricates success.
+- Pure domain logic (hex parsing, fixtures, nav) lives in `src/lib/atlas/`; UI in `src/components/atlas/`; keeps it portable to the monorepo.
+- Sample fixtures are only used when the in-memory sample switch is on and must render the "Sample data — not live" label.
